@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senderos de La Porcada · Archivo 2026 · EcoResort La Porcada</title>
+<meta name="description" content="Archivo de cinco rutas de senderismo documentadas en la isla de La Porcada y su entorno. EcoResort La Porcada by TAKYMA Investment Pioneer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f2ede7;
+  --text: #161616;
+  --text-emp: #333333;
+  --text-mute: #535353;
+  --text-faint: #b1b1b1;
+  --line: #e5e5e5;
+  --line-strong: #cfc8bf;
+  --inverse: #ffffff;
+  --accent: #8a2a1a;
+  --ease-quiet: cubic-bezier(.22, 1, .36, 1);
+  --ease-precise: cubic-bezier(.4, 0, .2, 1);
+  --ease-emphasis: cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Trilingual switch */
+body[data-lang="es"] .tr:not(.es) { display: none; }
+body[data-lang="en"] .tr:not(.en) { display: none; }
+body[data-lang="ru"] .tr:not(.ru) { display: none; }
+
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 200; line-height: 0.95; letter-spacing: -0.01em; }
+.eyebrow {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  display: inline-block;
+}
+
+/* SVG paper noise overlay */
+.noise-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+  animation: noise 20s steps(10) infinite;
+}
+@keyframes noise {
+  0%,100% { transform: translate(0,0); }
+  20% { transform: translate(-10%, 5%); }
+  50% { transform: translate(-10%, 5%); }
+  80% { transform: translate(-15%, 0); }
+}
+
+/* Topbar */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(242, 237, 231, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar__brand { display: flex; align-items: center; gap: 1.25rem; }
+.topbar__brand img { height: 30px; width: auto; display: block; }
+.topbar__title {
+  text-align: center;
+  font-family: 'Oswald'; font-weight: 300; font-size: 12px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--text-emp);
+}
+.lang-switch {
+  display: flex; align-items: center; gap: 0.5rem;
+  justify-self: end;
+}
+.lang-switch button {
+  background: transparent; border: none; cursor: pointer;
+  font-family: 'Oswald'; font-weight: 300; font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--text-faint);
+  padding: 4px 6px;
+  transition: color 300ms var(--ease-quiet);
+}
+.lang-switch button.is-active { color: var(--text); }
+.lang-switch button:hover { color: var(--text-emp); }
+.lang-switch span { color: var(--text-faint); font-family: 'Oswald'; font-weight: 200; font-size: 12px; }
+
+/* Hero */
+.hero {
+  position: relative; height: 100vh; min-height: 700px;
+  overflow: hidden; background: #161616;
+}
+.hero__video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(22,22,22,0.45) 0%, rgba(22,22,22,0.35) 35%, rgba(22,22,22,0.7) 100%);
+}
+.hero__watermark {
+  position: absolute; bottom: 4rem; right: 2rem;
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(80px, 16vw, 240px);
+  color: rgba(255,255,255,0.06);
+  pointer-events: none;
+  line-height: 1; letter-spacing: -0.03em;
+}
+.hero__content {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 8rem 2rem 6rem;
+  color: var(--inverse);
+}
+.hero__eyebrow { color: rgba(255,255,255,0.8); margin-bottom: 1.75rem; }
+.hero__title {
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(56px, 11vw, 168px);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+.hero__subtitle {
+  font-family: 'Roboto'; font-weight: 100;
+  font-size: clamp(16px, 1.5vw, 21px);
+  max-width: 720px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.88);
+}
+.hero__scroll {
+  position: absolute; bottom: 1.75rem; left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.55);
+  font-family: 'Oswald'; font-weight: 300; font-size: 10px;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  display: flex; gap: 0.75rem; align-items: center;
+}
+.hero__scroll::after {
+  content: ''; width: 40px; height: 1px;
+  background: rgba(255,255,255,0.4);
+  animation: scrollPulse 2.4s var(--ease-quiet) infinite;
+  transform-origin: left center;
+}
+@keyframes scrollPulse {
+  0%, 100% { transform: scaleX(0.4); opacity: 0.4; }
+  50% { transform: scaleX(1); opacity: 1; }
+}
+
+/* Edition strip */
+.edition {
+  padding: 3rem 2rem;
+  border-bottom: 1px solid var(--line);
+}
+.edition__inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 4rem; align-items: end;
+}
+.edition__col { display: flex; flex-direction: column; gap: 0.75rem; }
+.edition__date {
+  font-family: 'Oswald'; font-weight: 200; font-size: 28px;
+  letter-spacing: 0.12em; color: var(--text);
+}
+.edition__logo img { height: 32px; width: auto; display: block; }
+.edition__place {
+  font-family: 'Oswald'; font-weight: 200; font-size: 22px;
+  letter-spacing: 0.05em;
+}
+
+/* Section base */
+section { padding: 8rem 2rem; position: relative; }
+.container { max-width: 1400px; margin: 0 auto; }
+.container--wide { max-width: 1600px; margin: 0 auto; }
+.container--narrow { max-width: 860px; margin: 0 auto; }
+
+.section-eyebrow {
+  display: flex; align-items: center; gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.section-eyebrow::after {
+  content: ''; flex: 1; height: 1px; background: var(--line);
+}
+.section-title {
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.0;
+  margin-bottom: 5rem;
+  max-width: 22ch;
+  letter-spacing: -0.01em;
+}
+
+/* Intro */
+.intro__text {
+  font-family: 'Roboto'; font-weight: 100;
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.5;
+  max-width: 860px;
+  color: var(--text-emp);
+  margin-bottom: 5rem;
+}
+.intro__stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.intro__stat {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid var(--line);
+}
+.intro__stat:last-child { border-right: none; }
+.intro__stat-value {
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+.intro__stat-label {
+  font-family: 'Roboto'; font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+
+/* Index */
+.index__list { list-style: none; border-top: 1px solid var(--line); }
+.index__row {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+  transition: padding-left 500ms var(--ease-quiet), background 500ms var(--ease-quiet);
+}
+.index__row:hover { padding-left: 1.5rem; }
+.index__num {
+  font-family: 'Oswald'; font-weight: 200; font-size: 28px;
+  color: var(--text-faint); letter-spacing: 0.05em;
+}
+.index__name {
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: clamp(24px, 3vw, 40px);
+}
+.index__page {
+  font-family: 'Roboto'; font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-mute);
+}
+
+/* Mosaic */
+.mosaic-section { padding-bottom: 8rem; }
+.mosaic__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  gap: 0.75rem;
+  grid-auto-flow: dense;
+}
+.mosaic__tile {
+  overflow: hidden; position: relative;
+  background: #ddd; cursor: pointer;
+}
+.mosaic__tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.7s var(--ease-emphasis), transform 0.7s var(--ease-emphasis);
+}
+.mosaic__tile:hover img {
+  filter: grayscale(0);
+  transform: scale(1.07);
+}
+.mosaic__grid.has-hover .mosaic__tile:not(:hover) img {
+  transform: scale(0.97);
+  filter: grayscale(100%) brightness(0.85);
+}
+.mosaic__tile--tall { grid-row: span 2; }
+.mosaic__tile--wide { grid-column: span 2; }
+.mosaic__tile--big  { grid-row: span 2; grid-column: span 2; }
+.mosaic__tile-label {
+  position: absolute; bottom: 1rem; left: 1rem; right: 1rem;
+  color: var(--inverse);
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 500ms var(--ease-quiet), transform 500ms var(--ease-quiet);
+  z-index: 2;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+.mosaic__tile:hover .mosaic__tile-label { opacity: 1; transform: translateY(0); }
+.mosaic__tile-num {
+  position: absolute; top: 1rem; left: 1rem;
+  color: var(--inverse);
+  font-family: 'Oswald'; font-weight: 200; font-size: 12px;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+/* Trails */
+.trails-section { padding-top: 0; }
+.trail {
+  display: grid;
+  grid-template-columns: 100px 1fr 360px;
+  gap: 3rem;
+  padding: 5rem 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.trail:first-of-type { border-top: 1px solid var(--text); }
+.trail__num {
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 0.9;
+  color: var(--text-faint);
+  letter-spacing: -0.02em;
+}
+.trail__title {
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.trail__desc {
+  font-family: 'Roboto'; font-weight: 300;
+  font-size: 16px; line-height: 1.7;
+  color: var(--text-emp);
+  max-width: 580px;
+  margin-bottom: 2.5rem;
+}
+.trail__meta {
+  display: flex; flex-wrap: wrap;
+  gap: 2rem 3rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+.trail__meta > div { min-width: 70px; }
+.trail__meta b {
+  display: block;
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+.trail__meta > div > span {
+  font-family: 'Roboto'; font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+.trail__link {
+  display: inline-flex; align-items: center;
+  gap: 0.75rem;
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--text); text-decoration: none;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 6px;
+  transition: color 400ms var(--ease-quiet), border-color 400ms var(--ease-quiet), gap 400ms var(--ease-quiet);
+}
+.trail__link:hover {
+  color: var(--accent); border-color: var(--accent); gap: 1.25rem;
+}
+.trail__image {
+  position: relative; overflow: hidden;
+  aspect-ratio: 4/5;
+}
+.trail__image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(60%);
+  transition: filter 800ms var(--ease-emphasis), transform 800ms var(--ease-emphasis);
+}
+.trail:hover .trail__image img {
+  filter: grayscale(0); transform: scale(1.04);
+}
+
+/* Twilight */
+.twilight {
+  position: relative;
+  min-height: 80vh;
+  display: flex; align-items: center;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+.twilight__bg { position: absolute; inset: 0; z-index: 1; }
+.twilight__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.twilight__overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(22,22,22,0.55) 0%, rgba(22,22,22,0.4) 50%, rgba(22,22,22,0.75) 100%);
+}
+.twilight__content {
+  position: relative; z-index: 3;
+  color: var(--inverse);
+  max-width: 860px;
+  margin: 0 auto;
+}
+.twilight__eyebrow { color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+.twilight__quote {
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.15;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+.twilight__attr {
+  font-family: 'Roboto'; font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Duo */
+.duo-section { padding: 0; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.duo__cell {
+  position: relative; aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.duo__cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%);
+  transition: filter 1000ms var(--ease-emphasis), transform 1000ms var(--ease-emphasis);
+}
+.duo__cell:hover img {
+  filter: grayscale(0); transform: scale(1.03);
+}
+.duo__caption {
+  position: absolute; bottom: 2.5rem; left: 2.5rem; right: 2.5rem;
+  color: var(--inverse); z-index: 2;
+}
+.duo__caption-eyebrow {
+  font-family: 'Roboto'; font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 0.75rem;
+}
+.duo__caption-title {
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.05;
+}
+
+/* Notice */
+.notice { padding: 8rem 2rem; border-top: 1px solid var(--line); }
+.notice__list {
+  list-style: none;
+  border-top: 1px solid var(--line);
+  margin-top: 4rem;
+}
+.notice__item {
+  display: grid; grid-template-columns: 60px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.notice__num {
+  font-family: 'Oswald'; font-weight: 200; font-size: 24px;
+  color: var(--text-faint); font-style: italic;
+  letter-spacing: 0.02em;
+}
+.notice__item p {
+  font-family: 'Roboto'; font-weight: 300;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.5;
+  color: var(--text-emp);
+  max-width: 720px;
+}
+
+/* Colophon */
+.colophon { padding: 8rem 2rem 6rem; border-top: 1px solid var(--line); }
+.colophon__text {
+  font-family: 'Roboto'; font-weight: 100;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.55;
+  max-width: 760px;
+  color: var(--text-emp);
+  margin-bottom: 5rem;
+}
+.colophon__sign {
+  display: flex; align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--line);
+}
+.colophon__sign video {
+  width: 110px; height: auto;
+  display: block;
+}
+.colophon__sign-text {
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--text-mute);
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  padding: 5rem 2rem 2.5rem;
+  background: var(--text);
+  color: rgba(255,255,255,0.7);
+}
+.footer__inner { max-width: 1400px; margin: 0 auto; }
+.footer__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.footer__logo-img {
+  height: 44px; width: auto;
+  margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1);
+}
+.footer__title {
+  font-family: 'Oswald'; font-weight: 200;
+  font-size: clamp(28px, 3.5vw, 48px);
+  line-height: 1; color: var(--inverse);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.footer__sub {
+  font-family: 'Roboto'; font-weight: 300;
+  font-size: 13px; line-height: 1.65;
+  max-width: 380px;
+}
+.footer__h {
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.5rem;
+}
+.footer__list { list-style: none; }
+.footer__list li {
+  font-family: 'Roboto'; font-weight: 300;
+  font-size: 13px;
+  margin-bottom: 0.75rem;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+}
+.footer__bottom {
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer__copyright {
+  font-family: 'Oswald'; font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+}
+.footer__credit {
+  font-family: 'Roboto'; font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 1200ms var(--ease-quiet), transform 1200ms var(--ease-quiet);
+  will-change: transform, opacity;
+}
+.fade-up.is-in { opacity: 1; transform: none; }
+
+.fade-up-slow {
+  opacity: 0; transform: translateY(60px);
+  transition: opacity 1500ms var(--ease-quiet), transform 1500ms var(--ease-quiet);
+  will-change: transform, opacity;
+}
+.fade-up-slow.is-in { opacity: 1; transform: none; }
+
+.row-stagger > * {
+  opacity: 0;
+  transform: scale(1.04) translateY(20px);
+  transition: opacity 1000ms var(--ease-quiet), transform 1000ms var(--ease-quiet);
+}
+.row-stagger.is-in > * { opacity: 1; transform: none; }
+.row-stagger.is-in > *:nth-child(1) { transition-delay: 0ms; }
+.row-stagger.is-in > *:nth-child(2) { transition-delay: 100ms; }
+.row-stagger.is-in > *:nth-child(3) { transition-delay: 200ms; }
+.row-stagger.is-in > *:nth-child(4) { transition-delay: 300ms; }
+.row-stagger.is-in > *:nth-child(5) { transition-delay: 400ms; }
+.row-stagger.is-in > *:nth-child(6) { transition-delay: 500ms; }
+
+.hero .fade-up { opacity: 0; transform: translateY(40px); }
+.hero.is-loaded .fade-up {
+  opacity: 1; transform: none;
+  transition: opacity 1500ms var(--ease-quiet), transform 1500ms var(--ease-quiet);
+}
+.hero.is-loaded .hero__eyebrow  { transition-delay: 200ms; }
+.hero.is-loaded .hero__title   { transition-delay: 400ms; }
+.hero.is-loaded .hero__subtitle{ transition-delay: 700ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .fade-up, .fade-up-slow, .row-stagger > * {
+    opacity: 1 !important; transform: none !important;
+  }
+  .hero__scroll::after { display: none; }
+}
+
+/* Touch fallback */
+@media (pointer: coarse) {
+  .mosaic__tile img { filter: grayscale(0); }
+  .trail__image img { filter: grayscale(0); }
+  .duo__cell img    { filter: grayscale(0); }
+  .mosaic__tile-label { opacity: 1; transform: none; }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  section { padding: 5rem 1.5rem; }
+  .topbar { padding: 0.75rem 1.25rem; grid-template-columns: auto 1fr auto; gap: 1rem; }
+  .topbar__brand img { height: 24px; }
+  .topbar__title { font-size: 10px; letter-spacing: 0.2em; }
+  .lang-switch button { font-size: 11px; padding: 4px 4px; }
+  .hero { min-height: 600px; }
+  .hero__content { padding: 6rem 1.5rem 5rem; }
+  .hero__watermark { font-size: 80px; bottom: 1.5rem; right: 1rem; }
+  .edition__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .intro__text { font-size: 18px; margin-bottom: 3rem; }
+  .intro__stats { grid-template-columns: 1fr 1fr; }
+  .intro__stat { padding: 1.75rem 1.25rem; }
+  .intro__stat:nth-child(2n) { border-right: none; }
+  .intro__stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .index__row { grid-template-columns: 60px 1fr auto; gap: 1rem; padding: 1.5rem 0; }
+  .index__num { font-size: 20px; }
+  .index__name { font-size: 22px; }
+  .section-title { font-size: clamp(28px, 6vw, 44px); margin-bottom: 3rem; }
+  .mosaic__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; gap: 0.5rem; }
+  .mosaic__tile--big { grid-column: span 2; grid-row: span 2; }
+  .mosaic__tile--wide { grid-column: span 2; grid-row: span 1; }
+  .mosaic__tile--tall { grid-column: span 1; grid-row: span 2; }
+  .trail { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 0; }
+  .trail__num { font-size: 36px; }
+  .trail__image { aspect-ratio: 16/9; order: 2; }
+  .trail__body { order: 1; }
+  .trail__meta { gap: 1.5rem 2rem; }
+  .twilight { min-height: 60vh; padding: 5rem 1.5rem; }
+  .duo { grid-template-columns: 1fr; }
+  .duo__cell { aspect-ratio: 4/3; }
+  .notice { padding: 5rem 1.5rem; }
+  .notice__item { grid-template-columns: 40px 1fr; gap: 1rem; }
+  .colophon { padding: 5rem 1.5rem 4rem; }
+  .colophon__text { font-size: 18px; margin-bottom: 3rem; }
+  .colophon__sign { gap: 1.5rem; }
+  .colophon__sign video { width: 80px; }
+  .footer { padding: 4rem 1.5rem 2rem; }
+  .footer__top { grid-template-columns: 1fr; gap: 3rem; padding-bottom: 3rem; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .footer__copyright { font-size: 11px; }
+}
+
+@media (max-width: 600px) {
+  .topbar__title { display: none; }
+  .topbar { grid-template-columns: 1fr auto; }
+  .hero__title { font-size: clamp(44px, 13vw, 80px); }
+  .trail__title { font-size: 26px; }
+  .twilight__quote { font-size: 24px; }
+}
+</style>
+</head>
+<body data-lang="es">
+
+<!-- SVG paper noise -->
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="topbar__brand">
+    <img src="images/ECORESORT.PNG" alt="EcoResort La Porcada">
+  </div>
+  <div class="topbar__title">
+    <span class="tr es">Archivo Porcada 2026 · Senderos del Entorno</span>
+    <span class="tr en">Porcada Archive 2026 · Trails of the Surroundings</span>
+    <span class="tr ru">Архив Поркада 2026 · Тропы окрестностей</span>
+  </div>
+  <div class="lang-switch" role="group" aria-label="Language / Idioma / Язык">
+    <button data-lang-btn="es" class="is-active">ES</button>
+    <span>/</span>
+    <button data-lang-btn="en">EN</button>
+    <span>/</span>
+    <button data-lang-btn="ru">RU</button>
+  </div>
+</header>
+
+<!-- Hero with video header (first 8 seconds of playaporcada.mp4) -->
+<section class="hero" id="hero">
+  <video class="hero__video" autoplay muted playsinline id="heroVideo" poster="images/LAPORCADAORIGINAL20.JPG">
+    <source src="video/playaporcada.mp4" type="video/mp4">
+  </video>
+  <div class="hero__overlay"></div>
+  <div class="hero__watermark" aria-hidden="true">PORCADA</div>
+  <div class="hero__content">
+    <div class="hero__eyebrow eyebrow fade-up">
+      <span class="tr es">Archivo de Senderos · Volumen I</span>
+      <span class="tr en">Trail Archive · Volume I</span>
+      <span class="tr ru">Архив Троп · Том I</span>
+    </div>
+    <h1 class="hero__title fade-up">
+      <span class="tr es">Senderos de<br>La Porcada</span>
+      <span class="tr en">Trails of<br>La Porcada</span>
+      <span class="tr ru">Тропы<br>Ла Поркада</span>
+    </h1>
+    <p class="hero__subtitle fade-up">
+      <span class="tr es">Cinco rutas documentadas a pie, lente y brújula en la isla de La Porcada y su entorno inmediato. Un catálogo para el caminante que prefiere el silencio antes que el atajo.</span>
+      <span class="tr en">Five routes documented on foot, lens and compass on the island of La Porcada and its immediate surroundings. A catalogue for the walker who prefers silence over the shortcut.</span>
+      <span class="tr ru">Пять маршрутов, задокументированных пешком, линзой и компасом на острове Ла Поркада и в его ближайших окрестностях. Каталог для путника, который предпочитает тишину короткому пути.</span>
+    </p>
+  </div>
+  <div class="hero__scroll">
+    <span class="tr es">Desplazar</span>
+    <span class="tr en">Scroll</span>
+    <span class="tr ru">Прокрутить</span>
+  </div>
+</section>
+
+<!-- Edition strip -->
+<section class="edition">
+  <div class="edition__inner">
+    <div class="edition__col">
+      <span class="eyebrow">
+        <span class="tr es">Primera Edición</span>
+        <span class="tr en">First Edition</span>
+        <span class="tr ru">Первое издание</span>
+      </span>
+      <div class="edition__date">III · MMXXVI</div>
+    </div>
+    <div class="edition__col">
+      <span class="eyebrow">
+        <span class="tr es">Promueve</span>
+        <span class="tr en">Promoted by</span>
+        <span class="tr ru">При поддержке</span>
+      </span>
+      <div class="edition__logo">
+        <img src="images/LOGO.PNG" alt="TAKYMA Investment Pioneer">
+      </div>
+    </div>
+    <div class="edition__col">
+      <span class="eyebrow">
+        <span class="tr es">Editado en</span>
+        <span class="tr en">Published in</span>
+        <span class="tr ru">Издано в</span>
+      </span>
+      <div class="edition__place">La Porcada · ES</div>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="intro" id="intro">
+  <div class="container">
+    <div class="section-eyebrow fade-up">
+      <span class="eyebrow">
+        <span class="tr es">001 · Introducción</span>
+        <span class="tr en">001 · Introduction</span>
+        <span class="tr ru">001 · Введение</span>
+      </span>
+    </div>
+    <p class="intro__text fade-up-slow">
+      <span class="tr es">Este archivo reúne cinco rutas documentadas en la isla de La Porcada y su entorno más próximo — un territorio pequeño, agreste, expuesto a los vientos largos del sudoeste. Cada sendero ha sido recorrido, fotografiado y anotado a mano entre los inviernos de 2024 y 2026. No es una guía. Es un cuaderno de campo publicado.</span>
+      <span class="tr en">This archive brings together five routes documented on the island of La Porcada and its immediate surroundings — a small, rugged territory, exposed to the long winds of the southwest. Each trail has been walked, photographed and noted by hand between the winters of 2024 and 2026. It is not a guide. It is a field notebook published.</span>
+      <span class="tr ru">Этот архив объединяет пять маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях — небольшая, суровая местность, открытая долгим ветрам юго-запада. Каждая тропа пройдена, сфотографирована и записана от руки между зимами 2024 и 2026 годов. Это не путеводитель. Это опубликованный полевой блокнот.</span>
+    </p>
+    <div class="intro__stats row-stagger">
+      <div class="intro__stat">
+        <div class="intro__stat-value">5</div>
+        <div class="intro__stat-label">
+          <span class="tr es">Rutas</span>
+          <span class="tr en">Routes</span>
+          <span class="tr ru">Маршрутов</span>
+        </div>
+      </div>
+      <div class="intro__stat">
+        <div class="intro__stat-value">52</div>
+        <div class="intro__stat-label">
+          <span class="tr es">Km recorridos</span>
+          <span class="tr en">Km walked</span>
+          <span class="tr ru">км пройдено</span>
+        </div>
+      </div>
+      <div class="intro__stat">
+        <div class="intro__stat-value">1 580</div>
+        <div class="intro__stat-label">
+          <span class="tr es">m desnivel</span>
+          <span class="tr en">m elevation</span>
+          <span class="tr ru">м перепад</span>
+        </div>
+      </div>
+      <div class="intro__stat">
+        <div class="intro__stat-value">18h30</div>
+        <div class="intro__stat-label">
+          <span class="tr es">Tiempo estimado</span>
+          <span class="tr en">Estimated time</span>
+          <span class="tr ru">Расчётное время</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Index / table of contents -->
+<section class="index" id="index">
+  <div class="container">
+    <div class="section-eyebrow fade-up">
+      <span class="eyebrow">
+        <span class="tr es">002 · Índice del Archivo</span>
+        <span class="tr en">002 · Archive Index</span>
+        <span class="tr ru">002 · Указатель архива</span>
+      </span>
+    </div>
+    <ol class="index__list">
+      <li class="index__row fade-up">
+        <span class="index__num">001</span>
+        <span class="index__name">
+          <span class="tr es">Introducción</span>
+          <span class="tr en">Introduction</span>
+          <span class="tr ru">Введение</span>
+        </span>
+        <span class="index__page">P. 004</span>
+      </li>
+      <li class="index__row fade-up">
+        <span class="index__num">002</span>
+        <span class="index__name">
+          <span class="tr es">Placa del Territorio</span>
+          <span class="tr en">Territory Plate</span>
+          <span class="tr ru">Пластина территории</span>
+        </span>
+        <span class="index__page">P. 012</span>
+      </li>
+      <li class="index__row fade-up">
+        <span class="index__num">003</span>
+        <span class="index__name">
+          <span class="tr es">Rutas Catalogadas</span>
+          <span class="tr en">Catalogued Routes</span>
+          <span class="tr ru">Каталогизированные маршруты</span>
+        </span>
+        <span class="index__page">P. 024</span>
+      </li>
+      <li class="index__row fade-up">
+        <span class="index__num">004</span>
+        <span class="index__name">
+          <span class="tr es">Crepúsculo</span>
+          <span class="tr en">Twilight</span>
+          <span class="tr ru">Сумерки</span>
+        </span>
+        <span class="index__page">P. 084</span>
+      </li>
+      <li class="index__row fade-up">
+        <span class="index__num">005</span>
+        <span class="index__name">
+          <span class="tr es">Aviso a caminantes</span>
+          <span class="tr en">Notice to walkers</span>
+          <span class="tr ru">Обращение к путникам</span>
+        </span>
+        <span class="index__page">P. 092</span>
+      </li>
+      <li class="index__row fade-up">
+        <span class="index__num">006</span>
+        <span class="index__name">
+          <span class="tr es">Colofón</span>
+          <span class="tr en">Colophon</span>
+          <span class="tr ru">Колофон</span>
+        </span>
+        <span class="index__page">P. 096</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Mosaic gallery -->
+<section class="mosaic-section" id="placa">
+  <div class="container container--wide">
+    <div class="section-eyebrow fade-up">
+      <span class="eyebrow">
+        <span class="tr es">003 · Placa del Territorio</span>
+        <span class="tr en">003 · Territory Plate</span>
+        <span class="tr ru">003 · Пластина территории</span>
+      </span>
+    </div>
+    <h2 class="section-title fade-up">
+      <span class="tr es">Seis vistas del camino, antes de empezar a caminarlo.</span>
+      <span class="tr en">Six views of the path, before starting to walk it.</span>
+      <span class="tr ru">Шесть видов тропы, прежде чем начать идти.</span>
+    </h2>
+    <div class="mosaic__grid row-stagger" id="mosaicGrid">
+      <div class="mosaic__tile mosaic__tile--big">
+        <img src="images/sendero_porcada1.jpeg" alt="Sendero Porcada 01" loading="lazy">
+        <span class="mosaic__tile-num">P.01</span>
+        <span class="mosaic__tile-label">Vuelta a la Isla</span>
+      </div>
+      <div class="mosaic__tile">
+        <img src="images/sendero_porcada2.jpeg" alt="Sendero Porcada 02" loading="lazy">
+        <span class="mosaic__tile-num">P.02</span>
+        <span class="mosaic__tile-label">Cresta Norte</span>
+      </div>
+      <div class="mosaic__tile mosaic__tile--tall">
+        <img src="images/sendero_porcada3.jpeg" alt="Sendero Porcada 03" loading="lazy">
+        <span class="mosaic__tile-num">P.03</span>
+        <span class="mosaic__tile-label">Ruta del Entorno</span>
+      </div>
+      <div class="mosaic__tile">
+        <img src="images/sendero_porcada4.jpeg" alt="Sendero Porcada 04" loading="lazy">
+        <span class="mosaic__tile-num">P.04</span>
+        <span class="mosaic__tile-label">Camino Antiguo</span>
+      </div>
+      <div class="mosaic__tile mosaic__tile--wide">
+        <img src="images/sendero_porcada5.jpeg" alt="Sendero Porcada 05" loading="lazy">
+        <span class="mosaic__tile-num">P.05</span>
+        <span class="mosaic__tile-label">Costa de los Crespúsculos</span>
+      </div>
+      <div class="mosaic__tile">
+        <img src="images/sendero_porcada6.jpeg" alt="Sendero Porcada 06" loading="lazy">
+        <span class="mosaic__tile-num">P.06</span>
+        <span class="mosaic__tile-label">Borde del Archipiélago</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trails -->
+<section class="trails-section" id="rutas">
+  <div class="container">
+    <div class="section-eyebrow fade-up">
+      <span class="eyebrow">
+        <span class="tr es">004 · Rutas Catalogadas</span>
+        <span class="tr en">004 · Catalogued Routes</span>
+        <span class="tr ru">004 · Каталогизированные маршруты</span>
+      </span>
+    </div>
+    <h2 class="section-title fade-up">
+      <span class="tr es">Cinco senderos, trazados con brújula y verificados a pie.</span>
+      <span class="tr en">Five trails, traced with compass and verified on foot.</span>
+      <span class="tr ru">Пять троп, проложенных компасом и проверенных пешком.</span>
+    </h2>
+
+    <!-- Trail 01 -->
+    <article class="trail fade-up">
+      <div class="trail__num">01</div>
+      <div class="trail__body">
+        <h3 class="trail__title">
+          <span class="tr es">Isla Porcada · Vuelta a la Isla</span>
+          <span class="tr en">Isla Porcada · Round the Island</span>
+          <span class="tr ru">Иsla Porcada · Вокруг острова</span>
+        </h3>
+        <p class="trail__desc">
+          <span class="tr es">La vuelta íntegra a la isla por el perímetro costero. Sale de la playa principal, bordea los acantilados del este y regresa por el sendero alto del interior. Pasada de gaviotas, higos chumbos y la sal perpetua del norte.</span>
+          <span class="tr en">The full loop of the island along the coastal perimeter. Leaves from the main beach, skirts the eastern cliffs and returns along the high inland trail. A passage of gulls, prickly pears and the perpetual salt of the north.</span>
+          <span class="tr ru">Полный обход острова по прибрежному периметру. Выходит с главного пляжа, огибает восточные скалы и возвращается по верхней внутренней тропе. Маршрут чаек, опунций и вечной соли севера.</span>
+        </p>
+        <div class="trail__meta">
+          <div>
+            <b>12.4 km</b>
+            <span><span class="tr es">Distancia</span><span class="tr en">Distance</span><span class="tr ru">Дистанция</span></span>
+          </div>
+          <div>
+            <b>380 m</b>
+            <span><span class="tr es">Desnivel</span><span class="tr en">Elevation</span><span class="tr ru">Перепад</span></span>
+          </div>
+          <div>
+            <b>4h 30m</b>
+            <span><span class="tr es">Tiempo</span><span class="tr en">Time</span><span class="tr ru">Время</span></span>
+          </div>
+          <div>
+            <b><span class="tr es">Moderada</span><span class="tr en">Moderate</span><span class="tr ru">Средняя</span></b>
+            <span><span class="tr es">Dificultad</span><span class="tr en">Difficulty</span><span class="tr ru">Сложность</span></span>
+          </div>
+        </div>
+        <a class="trail__link" href="https://es.wikiloc.com/rutas-senderismo/ilsa-porcada-45357108" target="_blank" rel="noopener">
+          <span class="tr es">Ver ruta en Wikiloc</span>
+          <span class="tr en">View route on Wikiloc</span>
+          <span class="tr ru">Смотреть маршрут на Wikiloc</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="trail__image">
+        <img src="images/sendero_porcada1.jpeg" alt="Isla Porcada · Vuelta a la Isla" loading="lazy">
+      </div>
+    </article>
+
+    <!-- Trail 02 -->
+    <article class="trail fade-up">
+      <div class="trail__num">02</div>
+      <div class="trail__body">
+        <h3 class="trail__title">
+          <span class="tr es">Isla Porcada · Cresta Norte</span>
+          <span class="tr en">Isla Porcada · North Ridge</span>
+          <span class="tr ru">Иsla Porcada · Северный гребень</span>
+        </h3>
+        <p class="trail__desc">
+          <span class="tr es">La cresta norte de la isla, uno de los pocos puntos desde donde se ve, al mismo tiempo, el mar de las dos costas. Senda estrecha, piedra viva, viento constante. Recomendada para caminantes con tobillo entrenado.</span>
+          <span class="tr en">The northern ridge of the island, one of the few points from which both coasts' seas are visible at once. Narrow path, living stone, constant wind. Recommended for walkers with a trained ankle.</span>
+          <span class="tr ru">Северный гребень острова, одна из немногих точек, откуда видны моря обоих побережий одновременно. Узкая тропа, живой камень, постоянный ветер. Рекомендуется путникам с тренированной лодыжкой.</span>
+        </p>
+        <div class="trail__meta">
+          <div>
+            <b>8.2 km</b>
+            <span><span class="tr es">Distancia</span><span class="tr en">Distance</span><span class="tr ru">Дистанция</span></span>
+          </div>
+          <div>
+            <b>220 m</b>
+            <span><span class="tr es">Desnivel</span><span class="tr en">Elevation</span><span class="tr ru">Перепад</span></span>
+          </div>
+          <div>
+            <b>3h 00m</b>
+            <span><span class="tr es">Tiempo</span><span class="tr en">Time</span><span class="tr ru">Время</span></span>
+          </div>
+          <div>
+            <b><span class="tr es">Moderada</span><span class="tr en">Moderate</span><span class="tr ru">Средняя</span></b>
+            <span><span class="tr es">Dificultad</span><span class="tr en">Difficulty</span><span class="tr ru">Сложность</span></span>
+          </div>
+        </div>
+        <a class="trail__link" href="https://es.wikiloc.com/rutas-senderismo/isla-porcada-45333492" target="_blank" rel="noopener">
+          <span class="tr es">Ver ruta en Wikiloc</span>
+          <span class="tr en">View route on Wikiloc</span>
+          <span class="tr ru">Смотреть маршрут на Wikiloc</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="trail__image">
+        <img src="images/sendero_porcada2.jpeg" alt="Isla Porcada · Cresta Norte" loading="lazy">
+      </div>
+    </article>
+
+    <!-- Trail 03 -->
+    <article class="trail fade-up">
+      <div class="trail__num">03</div>
+      <div class="trail__body">
+        <h3 class="trail__title">
+          <span class="tr es">Valeria · Ruta del Entorno</span>
+          <span class="tr en">Valeria · Surroundings Route</span>
+          <span class="tr ru">Валерия · Маршрут окрестностей</span>
+        </h3>
+        <p class="trail__desc">
+          <span class="tr es">Ya no es la isla, pero la isla se sigue viendo. La ruta de Valeria atraviesa el olivar viejo y el pinar de repoblación hasta el mirador donde la Porcada entera cabe en una sola fotografía. Es la ruta más larga del archivo y la única que sale del término insular.</span>
+          <span class="tr en">It is no longer the island, but the island can still be seen. The Valeria route crosses the old olive grove and the repopulated pine forest up to the lookout where the whole of Porcada fits into a single photograph. It is the longest route in the archive and the only one leaving the island's boundary.</span>
+          <span class="tr ru">Это уже не остров, но остров всё ещё виден. Маршрут Валерии проходит через старую оливковую рощу и восстанавливаемый сосновый лес до смотровой площадки, где вся Поркада помещается в одном кадре. Это самый длинный маршрут в архиве и единственный, выходящий за пределы острова.</span>
+        </p>
+        <div class="trail__meta">
+          <div>
+            <b>14.7 km</b>
+            <span><span class="tr es">Distancia</span><span class="tr en">Distance</span><span class="tr ru">Дистанция</span></span>
+          </div>
+          <div>
+            <b>510 m</b>
+            <span><span class="tr es">Desnivel</span><span class="tr en">Elevation</span><span class="tr ru">Перепад</span></span>
+          </div>
+          <div>
+            <b>5h 00m</b>
+            <span><span class="tr es">Tiempo</span><span class="tr en">Time</span><span class="tr ru">Время</span></span>
+          </div>
+          <div>
+            <b><span class="tr es">Exigente</span><span class="tr en">Demanding</span><span class="tr ru">Сложная</span></b>
+            <span><span class="tr es">Dificultad</span><span class="tr en">Difficulty</span><span class="tr ru">Сложность</span></span>
+          </div>
+        </div>
+        <a class="trail__link" href="https://es.wikiloc.com/rutas-senderismo/valeria-160524558" target="_blank" rel="noopener">
+          <span class="tr es">Ver ruta en Wikiloc</span>
+          <span class="tr en">View route on Wikiloc</span>
+          <span class="tr ru">Смотреть маршрут на Wikiloc</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="trail__image">
+        <img src="images/sendero_porcada3.jpeg" alt="Valeria · Ruta del Entorno" loading="lazy">
+      </div>
+    </article>
+
+    <!-- Trail 04 -->
+    <article class="trail fade-up">
+      <div class="trail__num">04</div>
+      <div class="trail__body">
+        <h3 class="trail__title">
+          <span class="tr es">La Remedios · Camino Antiguo</span>
+          <span class="tr en">La Remedios · The Old Way</span>
+          <span class="tr ru">Ла Ремедиос · Древний путь</span>
+        </h3>
+        <p class="trail__desc">
+          <span class="tr es">El camino viejo de La Remedios, usado hasta los años cincuenta para llevar pescado seco al pueblo del interior. Hoy apenas se transita, pero los muretes de piedra seca siguen marcando el paso. Es la ruta más corta del archivo y la más llana; idónea para un caminar lento, de media jornada.</span>
+          <span class="tr en">The old way of La Remedios, used until the 1950s to carry dried fish to the inland village. Today it is barely walked, but the dry-stone walls still mark the passage. It is the shortest and flattest route in the archive; ideal for a slow, half-day walk.</span>
+          <span class="tr ru">Старая дорога Ла Ремедиос, по которой до 1950-х годов везли сушёную рыбу в деревню внутри острова. Сегодня её почти не проходят, но сухие каменные стенки всё ещё отмечают путь. Это самый короткий и ровный маршрут в архиве; идеально для медленной полуденной прогулки.</span>
+        </p>
+        <div class="trail__meta">
+          <div>
+            <b>6.5 km</b>
+            <span><span class="tr es">Distancia</span><span class="tr en">Distance</span><span class="tr ru">Дистанция</span></span>
+          </div>
+          <div>
+            <b>180 m</b>
+            <span><span class="tr es">Desnivel</span><span class="tr en">Elevation</span><span class="tr ru">Перепад</span></span>
+          </div>
+          <div>
+            <b>2h 15m</b>
+            <span><span class="tr es">Tiempo</span><span class="tr en">Time</span><span class="tr ru">Время</span></span>
+          </div>
+          <div>
+            <b><span class="tr es">Fácil</span><span class="tr en">Easy</span><span class="tr ru">Лёгкая</span></b>
+            <span><span class="tr es">Dificultad</span><span class="tr en">Difficulty</span><span class="tr ru">Сложность</span></span>
+          </div>
+        </div>
+        <a class="trail__link" href="https://es.wikiloc.com/rutas-senderismo/la-remedies-65933962" target="_blank" rel="noopener">
+          <span class="tr es">Ver ruta en Wikiloc</span>
+          <span class="tr en">View route on Wikiloc</span>
+          <span class="tr ru">Смотреть маршрут на Wikiloc</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="trail__image">
+        <img src="images/sendero_porcada4.jpeg" alt="La Remedios · Camino Antiguo" loading="lazy">
+      </div>
+    </article>
+
+    <!-- Trail 05 -->
+    <article class="trail fade-up">
+      <div class="trail__num">05</div>
+      <div class="trail__body">
+        <h3 class="trail__title">
+          <span class="tr es">Isla Porcada · Costa de los Crespúsculos</span>
+          <span class="tr en">Isla Porcada · Coast of Twilights</span>
+          <span class="tr ru">Иsla Porcada · Берег сумерек</span>
+        </h3>
+        <p class="trail__desc">
+          <span class="tr es">El tramo sudoeste de la isla, expuesto a los vientos largos del ocaso. Pasa por tres calas pequeñas, una fuente de agua dulce casi salada y termina en el punto donde el sol cae justo detrás del islote del faro. Llevar linterna para el regreso.</span>
+          <span class="tr en">The southwest stretch of the island, exposed to the long winds of dusk. It passes three small coves, a freshwater spring that is almost salty, and ends at the point where the sun falls just behind the lighthouse islet. Bring a torch for the return.</span>
+          <span class="tr ru">Юго-западный участок острова, открытый долгим вечерним ветрам. Проходит через три маленькие бухты, источник пресной воды, которая почти солёная, и заканчивается в точке, где солнце опускается прямо за островком с маяком. Взять фонарик для возвращения.</span>
+        </p>
+        <div class="trail__meta">
+          <div>
+            <b>10.1 km</b>
+            <span><span class="tr es">Distancia</span><span class="tr en">Distance</span><span class="tr ru">Дистанция</span></span>
+          </div>
+          <div>
+            <b>290 m</b>
+            <span><span class="tr es">Desnivel</span><span class="tr en">Elevation</span><span class="tr ru">Перепад</span></span>
+          </div>
+          <div>
+            <b>3h 45m</b>
+            <span><span class="tr es">Tiempo</span><span class="tr en">Time</span><span class="tr ru">Время</span></span>
+          </div>
+          <div>
+            <b><span class="tr es">Moderada</span><span class="tr en">Moderate</span><span class="tr ru">Средняя</span></b>
+            <span><span class="tr es">Dificultad</span><span class="tr en">Difficulty</span><span class="tr ru">Сложность</span></span>
+          </div>
+        </div>
+        <a class="trail__link" href="https://es.wikiloc.com/rutas-senderismo/isla-porcada-45304220" target="_blank" rel="noopener">
+          <span class="tr es">Ver ruta en Wikiloc</span>
+          <span class="tr en">View route on Wikiloc</span>
+          <span class="tr ru">Смотреть маршрут на Wikiloc</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="trail__image">
+        <img src="images/sendero_porcada5.jpeg" alt="Isla Porcada · Costa de los Crespúsculos" loading="lazy">
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Twilight full-bleed -->
+<section class="twilight" id="twilight">
+  <div class="twilight__bg">
+    <img src="images/PORCADAORIGINAL19.JPG" alt="Crepúsculo de La Porcada" loading="lazy">
+  </div>
+  <div class="twilight__overlay"></div>
+  <div class="twilight__content">
+    <div class="twilight__eyebrow eyebrow fade-up">
+      <span class="tr es">005 · Crepúsculo</span>
+      <span class="tr en">005 · Twilight</span>
+      <span class="tr ru">005 · Сумерки</span>
+    </div>
+    <p class="twilight__quote fade-up-slow">
+      <span class="tr es">«Al caer la tarde, La Porcada deja de ser una isla y se convierte en un reloj. El último minuto de luz no es un instante: es un intervalo que se puede caminar.»</span>
+      <span class="tr en">"At dusk, La Porcada stops being an island and becomes a clock. The last minute of light is not an instant: it is an interval that can be walked."</span>
+      <span class="tr ru">«С наступлением сумерек Ла Поркада перестаёт быть островом и становится часами. Последняя минута света — не мгновение: это интервал, который можно пройти пешком.»</span>
+    </p>
+    <div class="twilight__attr fade-up">
+      <span class="tr es">Cuaderno de campo · Marzo 2026</span>
+      <span class="tr en">Field notebook · March 2026</span>
+      <span class="tr ru">Полевой блокнот · Март 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- Duo: aerial + beach -->
+<section class="duo-section">
+  <div class="duo">
+    <div class="duo__cell">
+      <img src="images/LAPORCADAORIGINAL4.JPG" alt="Vista aérea de La Porcada" loading="lazy">
+      <div class="duo__caption">
+        <div class="duo__caption-eyebrow">
+          <span class="tr es">Vista Aérea</span>
+          <span class="tr en">Aerial View</span>
+          <span class="tr ru">Вид с воздуха</span>
+        </div>
+        <div class="duo__caption-title">
+          <span class="tr es">La isla entera, en una sola vista.</span>
+          <span class="tr en">The whole island, in a single glance.</span>
+          <span class="tr ru">Весь остров, в одном взгляде.</span>
+        </div>
+      </div>
+    </div>
+    <div class="duo__cell">
+      <img src="images/LAPORCADAORIGINAL20.JPG" alt="Playa de La Porcada" loading="lazy">
+      <div class="duo__caption">
+        <div class="duo__caption-eyebrow">
+          <span class="tr es">Playa Principal</span>
+          <span class="tr en">Main Beach</span>
+          <span class="tr ru">Главный пляж</span>
+        </div>
+        <div class="duo__caption-title">
+          <span class="tr es">Punto de partida y de regreso.</span>
+          <span class="tr en">Point of departure and return.</span>
+          <span class="tr ru">Точка отправления и возвращения.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notice to walkers -->
+<section class="notice" id="aviso">
+  <div class="container">
+    <div class="section-eyebrow fade-up">
+      <span class="eyebrow">
+        <span class="tr es">Aviso a caminantes</span>
+        <span class="tr en">Notice to walkers</span>
+        <span class="tr ru">Обращение к путникам</span>
+      </span>
+    </div>
+    <h2 class="section-title fade-up">
+      <span class="tr es">Cuatro notas, leídas de pie, antes de salir.</span>
+      <span class="tr en">Four notes, read standing, before setting off.</span>
+      <span class="tr ru">Четыре заметки, прочитанные стоя, перед выходом.</span>
+    </h2>
+    <ol class="notice__list">
+      <li class="notice__item fade-up">
+        <span class="notice__num">i.</span>
+        <p>
+          <span class="tr es">Llevar agua suficiente — no hay fuentes potables en los tramos altos. Recomendado un litro y medio por persona en verano, uno en invierno.</span>
+          <span class="tr en">Carry enough water — no potable sources on the high stretches. Recommended one and a half litres per person in summer, one in winter.</span>
+          <span class="tr ru">Берите достаточный запас воды — на верхних участках нет питьевых источников. Рекомендуется полтора литра на человека летом, один зимой.</span>
+        </p>
+      </li>
+      <li class="notice__item fade-up">
+        <span class="notice__num">ii.</span>
+        <p>
+          <span class="tr es">No encender fuego fuera de los puntos señalados por el EcoResort. El viento sudoeste puede arrastrar una chispa más lejos de lo que se imagina.</span>
+          <span class="tr en">Do not light fires outside the points marked by the EcoResort. The southwest wind can carry a spark further than one imagines.</span>
+          <span class="tr ru">Не разводите огонь вне точек, отмеченных Экорезортом. Юго-западный ветер может унести искру дальше, чем кажется.</span>
+        </p>
+      </li>
+      <li class="notice__item fade-up">
+        <span class="notice__num">iii.</span>
+        <p>
+          <span class="tr es">Mantener distancia con la fauna salvaje — no alimentar, no perseguir, no grabar. La isla no es un escenario, es un hábitat.</span>
+          <span class="tr en">Keep distance from wild fauna — do not feed, do not chase, do not record. The island is not a stage, it is a habitat.</span>
+          <span class="tr ru">Держите дистанцию от дикой фауны — не кормите, не преследуйте, не снимайте. Остров — не сцена, а среда обитания.</span>
+        </p>
+      </li>
+      <li class="notice__item fade-up">
+        <span class="notice__num">iv.</span>
+        <p>
+          <span class="tr es">Avisar al EcoResort antes de salir y al regresar. Recepción 24h. En caso de emergencia, llamar al 112 y a recepción, en este orden.</span>
+          <span class="tr en">Notify the EcoResort before leaving and upon return. 24h reception. In case of emergency, call 112 and then reception, in this order.</span>
+          <span class="tr ru">Сообщайте Экорезорту перед выходом и по возвращении. Рецепция работает круглосуточно. В случае чрезвычайной ситуации позвоните 112, затем в рецепцию — в этом порядке.</span>
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Colophon -->
+<section class="colophon" id="colofon">
+  <div class="container">
+    <div class="section-eyebrow fade-up">
+      <span class="eyebrow">
+        <span class="tr es">006 · Colofón</span>
+        <span class="tr en">006 · Colophon</span>
+        <span class="tr ru">006 · Колофон</span>
+      </span>
+    </div>
+    <p class="colophon__text fade-up-slow">
+      <span class="tr es">Este archivo reúne cinco rutas documentadas en la isla de La Porcada y su entorno más próximo. Cada una ha sido recorrida al menos dos veces, en estaciones distintas, y verificada con brújula y GPS. Las distancias y los desniveles son aproximados pero comprobados. Las rutas están hosteadas en Wikiloc, donde pueden descargarse los trazados completos para uso en campo. EcoResort La Porcada promueve un senderismo responsable y silencioso: no se deja rastro, no se molesta a la fauna, no se enciende fuego fuera de los puntos señalados. El archivo se actualiza cada temporada. Última verificación: marzo de 2026.</span>
+      <span class="tr en">This archive brings together five routes documented on the island of La Porcada and its immediate surroundings. Each has been walked at least twice, in different seasons, and verified with compass and GPS. Distances and elevations are approximate but checked. The routes are hosted on Wikiloc, where full traces can be downloaded for field use. EcoResort La Porcada promotes responsible and silent hiking: leave no trace, do not disturb wildlife, do not light fires outside the marked points. The archive is updated every season. Last verification: March 2026.</span>
+      <span class="tr ru">Этот архив объединяет пять маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях. Каждый пройден как минимум дважды, в разные сезоны, и проверен компасом и GPS. Расстояния и перепады высот приблизительны, но проверены. Маршруты размещены на Wikiloc, где можно загрузить полные треки для использования в поле. Экорезорт Ла Поркада способствует ответственному и тихому пешему туризму: не оставляйте следов, не беспокойте фауну, не разводите огонь вне отмеченных мест. Архив обновляется каждый сезон. Последняя проверка: март 2026.</span>
+    </p>
+    <div class="colophon__sign fade-up">
+      <video autoplay muted loop playsinline>
+        <source src="video/TAKYMA.mp4" type="video/mp4">
+      </video>
+      <div class="colophon__sign-text">
+        TAKYMA<br>Investment Pioneer
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <img src="images/ECORESORT.PNG" alt="EcoResort La Porcada" class="footer__logo-img">
+        <h2 class="footer__title">
+          <span class="tr es">Senderos de La Porcada</span>
+          <span class="tr en">Trails of La Porcada</span>
+          <span class="tr ru">Тропы Ла Поркада</span>
+        </h2>
+        <p class="footer__sub">
+          <span class="tr es">Archivo de cinco rutas documentadas en la isla de La Porcada y su entorno inmediato. Primera edición, marzo de 2026.</span>
+          <span class="tr en">Archive of five routes documented on the island of La Porcada and its immediate surroundings. First edition, March 2026.</span>
+          <span class="tr ru">Архив пяти маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях. Первое издание, март 2026.</span>
+        </p>
+      </div>
+      <div>
+        <div class="footer__h">
+          <span class="tr es">Rutas</span>
+          <span class="tr en">Routes</span>
+          <span class="tr ru">Маршруты</span>
+        </div>
+        <ul class="footer__list">
+          <li>01 · <span class="tr es">Vuelta a la Isla</span><span class="tr en">Round the Island</span><span class="tr ru">Вокруг острова</span></li>
+          <li>02 · <span class="tr es">Cresta Norte</span><span class="tr en">North Ridge</span><span class="tr ru">Северный гребень</span></li>
+          <li>03 · <span class="tr es">Valeria · Entorno</span><span class="tr en">Valeria · Surroundings</span><span class="tr ru">Валерия · Окрестности</span></li>
+          <li>04 · <span class="tr es">La Remedios</span><span class="tr en">La Remedios</span><span class="tr ru">Ла Ремедиос</span></li>
+          <li>05 · <span class="tr es">Costa de los Crespúsculos</span><span class="tr en">Coast of Twilights</span><span class="tr ru">Берег сумерек</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__h">
+          <span class="tr es">Promotor</span>
+          <span class="tr en">Promoter</span>
+          <span class="tr ru">Промоутер</span>
+        </div>
+        <img src="images/LOGO.PNG" alt="TAKYMA Investment Pioneer" class="footer__logo-img">
+        <p class="footer__sub">TAKYMA<br>Investment Pioneer</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        © 2026 · ECORESORT LA PORCADA · BY TAKYMA INVESTMENT PIONEER
+      </div>
+      <div class="footer__credit">
+        <span class="tr es">Todos los derechos reservados</span>
+        <span class="tr en">All rights reserved</span>
+        <span class="tr ru">Все права защищены</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // --- Language switcher ---
+  const langButtons = document.querySelectorAll('[data-lang-btn]');
+  const body = document.body;
+  langButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const lang = btn.dataset.langBtn;
+      body.dataset.lang = lang;
+      langButtons.forEach(function (b) {
+        b.classList.toggle('is-active', b.dataset.langBtn === lang);
+      });
+    });
+  });
+
+  // --- Hero video loop (first 8 seconds only) ---
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    heroVideo.addEventListener('timeupdate', function () {
+      if (heroVideo.currentTime >= 8) {
+        heroVideo.currentTime = 0;
+        if (heroVideo.paused) heroVideo.play().catch(function () {});
+      }
+    });
+    // Try to autoplay (muted + playsinline already set)
+    heroVideo.play().catch(function () {});
+  }
+
+  // --- Mark hero loaded (for staggered entrance) ---
+  window.addEventListener('load', function () {
+    const hero = document.querySelector('.hero');
+    if (hero) hero.classList.add('is-loaded');
+  });
+
+  // --- IntersectionObserver for fade-ups ---
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+
+    document.querySelectorAll('.fade-up, .fade-up-slow, .row-stagger')
+      .forEach(function (el) { io.observe(el); });
+  } else {
+    // Fallback: show everything
+    document.querySelectorAll('.fade-up, .fade-up-slow, .row-stagger')
+      .forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // --- Mosaic push-back hover ---
+  const mosaicGrid = document.getElementById('mosaicGrid');
+  if (mosaicGrid && window.matchMedia('(pointer: fine)').matches) {
+    mosaicGrid.querySelectorAll('.mosaic__tile').forEach(function (tile) {
+      tile.addEventListener('mouseenter', function () {
+        mosaicGrid.classList.add('has-hover');
+      });
+      tile.addEventListener('mouseleave', function () {
+        mosaicGrid.classList.remove('has-hover');
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
