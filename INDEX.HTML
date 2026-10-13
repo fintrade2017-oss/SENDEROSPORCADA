@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Senderos de La Porcada · Archivo 2026 · EcoResort La Porcada</title>
-<meta name="description" content="Archivo de cinco rutas de senderismo documentadas en la isla de La Porcada y su entorno. EcoResort La Porcada by TAKYMA Investment Pioneer.">
+<meta name="description" content="Archivo de cinco rutas de senderismo documentadas en la isla de La Porcada y su entorno, Pacífico de Chiriquí, Panamá. EcoResort La Porcada by TAKYMA Investment Pioneer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
@@ -36,7 +36,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Trilingual switch */
 body[data-lang="es"] .tr:not(.es) { display: none; }
 body[data-lang="en"] .tr:not(.en) { display: none; }
 body[data-lang="ru"] .tr:not(.ru) { display: none; }
@@ -52,7 +51,6 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 200; line-heigh
   display: inline-block;
 }
 
-/* SVG paper noise overlay */
 .noise-overlay {
   position: fixed; inset: 0; pointer-events: none; z-index: 9999;
   opacity: 0.04;
@@ -66,7 +64,6 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 200; line-heigh
   80% { transform: translate(-15%, 0); }
 }
 
-/* Topbar */
 .topbar {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -104,7 +101,6 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 200; line-heigh
 .lang-switch button:hover { color: var(--text-emp); }
 .lang-switch span { color: var(--text-faint); font-family: 'Oswald'; font-weight: 200; font-size: 12px; }
 
-/* Hero */
 .hero {
   position: relative; height: 100vh; min-height: 700px;
   overflow: hidden; background: #161616;
@@ -166,7 +162,6 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 200; line-heigh
   50% { transform: scaleX(1); opacity: 1; }
 }
 
-/* Edition strip */
 .edition {
   padding: 3rem 2rem;
   border-bottom: 1px solid var(--line);
@@ -187,7 +182,6 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 200; line-heigh
   letter-spacing: 0.05em;
 }
 
-/* Section base */
 section { padding: 8rem 2rem; position: relative; }
 .container { max-width: 1400px; margin: 0 auto; }
 .container--wide { max-width: 1600px; margin: 0 auto; }
@@ -209,7 +203,6 @@ section { padding: 8rem 2rem; position: relative; }
   letter-spacing: -0.01em;
 }
 
-/* Intro */
 .intro__text {
   font-family: 'Roboto'; font-weight: 100;
   font-size: clamp(22px, 2.4vw, 32px);
@@ -243,7 +236,6 @@ section { padding: 8rem 2rem; position: relative; }
   color: var(--text-mute);
 }
 
-/* Index */
 .index__list { list-style: none; border-top: 1px solid var(--line); }
 .index__row {
   display: grid;
@@ -270,7 +262,6 @@ section { padding: 8rem 2rem; position: relative; }
   color: var(--text-mute);
 }
 
-/* Mosaic */
 .mosaic-section { padding-bottom: 8rem; }
 .mosaic__grid {
   display: grid;
@@ -321,7 +312,6 @@ section { padding: 8rem 2rem; position: relative; }
   mix-blend-mode: difference;
 }
 
-/* Trails */
 .trails-section { padding-top: 0; }
 .trail {
   display: grid;
@@ -402,7 +392,6 @@ section { padding: 8rem 2rem; position: relative; }
   filter: grayscale(0); transform: scale(1.04);
 }
 
-/* Twilight */
 .twilight {
   position: relative;
   min-height: 80vh;
@@ -440,7 +429,6 @@ section { padding: 8rem 2rem; position: relative; }
   color: rgba(255,255,255,0.7);
 }
 
-/* Duo */
 .duo-section { padding: 0; }
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
 .duo__cell {
@@ -473,7 +461,6 @@ section { padding: 8rem 2rem; position: relative; }
   line-height: 1.05;
 }
 
-/* Notice */
 .notice { padding: 8rem 2rem; border-top: 1px solid var(--line); }
 .notice__list {
   list-style: none;
@@ -500,7 +487,6 @@ section { padding: 8rem 2rem; position: relative; }
   max-width: 720px;
 }
 
-/* Colophon */
 .colophon { padding: 8rem 2rem 6rem; border-top: 1px solid var(--line); }
 .colophon__text {
   font-family: 'Roboto'; font-weight: 100;
@@ -528,7 +514,6 @@ section { padding: 8rem 2rem; position: relative; }
   line-height: 1.5;
 }
 
-/* Footer */
 .footer {
   padding: 5rem 2rem 2.5rem;
   background: var(--text);
@@ -594,7 +579,6 @@ section { padding: 8rem 2rem; position: relative; }
   color: rgba(255,255,255,0.5);
 }
 
-/* Animations */
 .fade-up {
   opacity: 0; transform: translateY(40px);
   transition: opacity 1200ms var(--ease-quiet), transform 1200ms var(--ease-quiet);
@@ -642,7 +626,6 @@ section { padding: 8rem 2rem; position: relative; }
   .hero__scroll::after { display: none; }
 }
 
-/* Touch fallback */
 @media (pointer: coarse) {
   .mosaic__tile img { filter: grayscale(0); }
   .trail__image img { filter: grayscale(0); }
@@ -650,7 +633,6 @@ section { padding: 8rem 2rem; position: relative; }
   .mosaic__tile-label { opacity: 1; transform: none; }
 }
 
-/* Mobile */
 @media (max-width: 900px) {
   section { padding: 5rem 1.5rem; }
   .topbar { padding: 0.75rem 1.25rem; grid-template-columns: auto 1fr auto; gap: 1rem; }
@@ -705,10 +687,8 @@ section { padding: 8rem 2rem; position: relative; }
 </head>
 <body data-lang="es">
 
-<!-- SVG paper noise -->
 <div class="noise-overlay" aria-hidden="true"></div>
 
-<!-- Topbar -->
 <header class="topbar">
   <div class="topbar__brand">
     <img src="images/ECORESORT.PNG" alt="EcoResort La Porcada">
@@ -727,7 +707,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </header>
 
-<!-- Hero with video header (first 8 seconds of playaporcada.mp4) -->
 <section class="hero" id="hero">
   <video class="hero__video" autoplay muted playsinline id="heroVideo" poster="images/LAPORCADAORIGINAL20.JPG">
     <source src="video/playaporcada.mp4" type="video/mp4">
@@ -746,9 +725,9 @@ section { padding: 8rem 2rem; position: relative; }
       <span class="tr ru">Тропы<br>Ла Поркада</span>
     </h1>
     <p class="hero__subtitle fade-up">
-      <span class="tr es">Cinco rutas documentadas a pie, lente y brújula en la isla de La Porcada y su entorno inmediato. Un catálogo para el caminante que prefiere el silencio antes que el atajo.</span>
-      <span class="tr en">Five routes documented on foot, lens and compass on the island of La Porcada and its immediate surroundings. A catalogue for the walker who prefers silence over the shortcut.</span>
-      <span class="tr ru">Пять маршрутов, задокументированных пешком, линзой и компасом на острове Ла Поркада и в его ближайших окрестностях. Каталог для путника, который предпочитает тишину короткому пути.</span>
+      <span class="tr es">Cinco rutas documentadas a pie, lente y brújula en la isla de La Porcada y su entorno inmediato, en el Pacífico de Chiriquí, Panamá. Un catálogo para el caminante que prefiere el silencio antes que el atajo.</span>
+      <span class="tr en">Five routes documented on foot, lens and compass on the island of La Porcada and its immediate surroundings, in the Pacific of Chiriquí, Panama. A catalogue for the walker who prefers silence over the shortcut.</span>
+      <span class="tr ru">Пять маршрутов, задокументированных пешком, линзой и компасом на острове Ла Поркада и в его ближайших окрестностях, в тихоокеанской части Чирики, Панама. Каталог для путника, который предпочитает тишину короткому пути.</span>
     </p>
   </div>
   <div class="hero__scroll">
@@ -758,7 +737,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Edition strip -->
 <section class="edition">
   <div class="edition__inner">
     <div class="edition__col">
@@ -785,12 +763,15 @@ section { padding: 8rem 2rem; position: relative; }
         <span class="tr en">Published in</span>
         <span class="tr ru">Издано в</span>
       </span>
-      <div class="edition__place">La Porcada · ES</div>
+      <div class="edition__place">
+        <span class="tr es">La Porcada · Chiriquí · PA</span>
+        <span class="tr en">La Porcada · Chiriquí · PA</span>
+        <span class="tr ru">Ла Поркада · Чирики · PA</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Intro -->
 <section class="intro" id="intro">
   <div class="container">
     <div class="section-eyebrow fade-up">
@@ -801,9 +782,9 @@ section { padding: 8rem 2rem; position: relative; }
       </span>
     </div>
     <p class="intro__text fade-up-slow">
-      <span class="tr es">Este archivo reúne cinco rutas documentadas en la isla de La Porcada y su entorno más próximo — un territorio pequeño, agreste, expuesto a los vientos largos del sudoeste. Cada sendero ha sido recorrido, fotografiado y anotado a mano entre los inviernos de 2024 y 2026. No es una guía. Es un cuaderno de campo publicado.</span>
-      <span class="tr en">This archive brings together five routes documented on the island of La Porcada and its immediate surroundings — a small, rugged territory, exposed to the long winds of the southwest. Each trail has been walked, photographed and noted by hand between the winters of 2024 and 2026. It is not a guide. It is a field notebook published.</span>
-      <span class="tr ru">Этот архив объединяет пять маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях — небольшая, суровая местность, открытая долгим ветрам юго-запада. Каждая тропа пройдена, сфотографирована и записана от руки между зимами 2024 и 2026 годов. Это не путеводитель. Это опубликованный полевой блокнот.</span>
+      <span class="tr es">Este archivo reúne cinco rutas documentadas en la isla de La Porcada y su entorno más próximo — un territorio pequeño, agreste, bañado por las aguas cálidas del Pacífico de Chiriquí, a pocos grados del ecuador. Selva tropical densa, manglares litorales, arrecifes coralinos y una biodiversidad que no cabe en una sola mirada. Cada sendero ha sido recorrido, fotografiado y anotado a mano entre las temporadas secas de 2024 y 2026. No es una guía. Es un cuaderno de campo publicado.</span>
+      <span class="tr en">This archive brings together five routes documented on the island of La Porcada and its immediate surroundings — a small, rugged territory bathed by the warm waters of the Pacific of Chiriquí, a few degrees from the equator. Dense tropical rainforest, coastal mangroves, coral reefs and a biodiversity that cannot fit in a single glance. Each trail has been walked, photographed and noted by hand between the dry seasons of 2024 and 2026. It is not a guide. It is a field notebook published.</span>
+      <span class="tr ru">Этот архив объединяет пять маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях — небольшая, суровая местность, омываемая тёплыми водами Тихого океана Чирики, в нескольких градусах от экватора. Густой тропический лес, прибрежные мангры, коралловые рифы и биоразнообразие, которое не помещается в одном взгляде. Каждая тропа пройдена, сфотографирована и записана от руки между засушливыми сезонами 2024 и 2026 годов. Это не путеводитель. Это опубликованный полевой блокнот.</span>
     </p>
     <div class="intro__stats row-stagger">
       <div class="intro__stat">
@@ -825,9 +806,9 @@ section { padding: 8rem 2rem; position: relative; }
       <div class="intro__stat">
         <div class="intro__stat-value">1 580</div>
         <div class="intro__stat-label">
-          <span class="tr es">m desnivel</span>
-          <span class="tr en">m elevation</span>
-          <span class="tr ru">м перепад</span>
+          <span class="tr es">m desnivel acum.</span>
+          <span class="tr en">m elevation gain</span>
+          <span class="tr ru">м суммарный перепад</span>
         </div>
       </div>
       <div class="intro__stat">
@@ -842,7 +823,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Index / table of contents -->
 <section class="index" id="index">
   <div class="container">
     <div class="section-eyebrow fade-up">
@@ -911,7 +891,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Mosaic gallery -->
 <section class="mosaic-section" id="placa">
   <div class="container container--wide">
     <div class="section-eyebrow fade-up">
@@ -930,38 +909,61 @@ section { padding: 8rem 2rem; position: relative; }
       <div class="mosaic__tile mosaic__tile--big">
         <img src="images/sendero_porcada1.jpeg" alt="Sendero Porcada 01" loading="lazy">
         <span class="mosaic__tile-num">P.01</span>
-        <span class="mosaic__tile-label">Vuelta a la Isla</span>
+        <span class="mosaic__tile-label">
+          <span class="tr es">Vuelta a la Isla</span>
+          <span class="tr en">Round the Island</span>
+          <span class="tr ru">Вокруг острова</span>
+        </span>
       </div>
       <div class="mosaic__tile">
         <img src="images/sendero_porcada2.jpeg" alt="Sendero Porcada 02" loading="lazy">
         <span class="mosaic__tile-num">P.02</span>
-        <span class="mosaic__tile-label">Cresta Norte</span>
+        <span class="mosaic__tile-label">
+          <span class="tr es">Cresta Norte</span>
+          <span class="tr en">North Ridge</span>
+          <span class="tr ru">Северный гребень</span>
+        </span>
       </div>
       <div class="mosaic__tile mosaic__tile--tall">
         <img src="images/sendero_porcada3.jpeg" alt="Sendero Porcada 03" loading="lazy">
         <span class="mosaic__tile-num">P.03</span>
-        <span class="mosaic__tile-label">Ruta del Entorno</span>
+        <span class="mosaic__tile-label">
+          <span class="tr es">Ruta del Entorno</span>
+          <span class="tr en">Surroundings Route</span>
+          <span class="tr ru">Маршрут окрестностей</span>
+        </span>
       </div>
       <div class="mosaic__tile">
         <img src="images/sendero_porcada4.jpeg" alt="Sendero Porcada 04" loading="lazy">
         <span class="mosaic__tile-num">P.04</span>
-        <span class="mosaic__tile-label">Camino Antiguo</span>
+        <span class="mosaic__tile-label">
+          <span class="tr es">Camino Antiguo</span>
+          <span class="tr en">The Old Way</span>
+          <span class="tr ru">Древний путь</span>
+        </span>
       </div>
       <div class="mosaic__tile mosaic__tile--wide">
-        <img src="images/sendero_porcada5.jpg" alt="Sendero Porcada 05" loading="lazy">
+        <img src="images/sendero_porcada5.jpeg" alt="Sendero Porcada 05" loading="lazy">
         <span class="mosaic__tile-num">P.05</span>
-        <span class="mosaic__tile-label">Costa de los Crespúsculos</span>
+        <span class="mosaic__tile-label">
+          <span class="tr es">Costa de los Crespúsculos</span>
+          <span class="tr en">Coast of Twilights</span>
+          <span class="tr ru">Берег сумерек</span>
+        </span>
       </div>
       <div class="mosaic__tile">
         <img src="images/sendero_porcada6.jpeg" alt="Sendero Porcada 06" loading="lazy">
         <span class="mosaic__tile-num">P.06</span>
-        <span class="mosaic__tile-label">Borde del Archipiélago</span>
+        <span class="mosaic__tile-label">
+          <span class="tr es">Borde del Archipiélago</span>
+          <span class="tr en">Edge of the Archipelago</span>
+          <span class="tr ru">Край архипелага</span>
+        </span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Trails -->
 <section class="trails-section" id="rutas">
   <div class="container">
     <div class="section-eyebrow fade-up">
@@ -977,19 +979,18 @@ section { padding: 8rem 2rem; position: relative; }
       <span class="tr ru">Пять троп, проложенных компасом и проверенных пешком.</span>
     </h2>
 
-    <!-- Trail 01 -->
     <article class="trail fade-up">
       <div class="trail__num">01</div>
       <div class="trail__body">
         <h3 class="trail__title">
           <span class="tr es">Isla Porcada · Vuelta a la Isla</span>
           <span class="tr en">Isla Porcada · Round the Island</span>
-          <span class="tr ru">Иsla Porcada · Вокруг острова</span>
+          <span class="tr ru">Isla Porcada · Вокруг острова</span>
         </h3>
         <p class="trail__desc">
-          <span class="tr es">La vuelta íntegra a la isla por el perímetro costero. Sale de la playa principal, bordea los acantilados del este y regresa por el sendero alto del interior. Pasada de gaviotas, higos chumbos y la sal perpetua del norte.</span>
-          <span class="tr en">The full loop of the island along the coastal perimeter. Leaves from the main beach, skirts the eastern cliffs and returns along the high inland trail. A passage of gulls, prickly pears and the perpetual salt of the north.</span>
-          <span class="tr ru">Полный обход острова по прибрежному периметру. Выходит с главного пляжа, огибает восточные скалы и возвращается по верхней внутренней тропе. Маршрут чаек, опунций и вечной соли севера.</span>
+          <span class="tr es">La vuelta íntegra a la isla por el perímetro costero. Sale de la playa principal, bordea los acantilados coralinos del este y regresa por el sendero alto del interior, entre manglares y ceibas centenarias. Pasada de fragatas, pelícanos y la brisa cálida del Pacífico ecuatorial.</span>
+          <span class="tr en">The full loop of the island along the coastal perimeter. Leaves from the main beach, skirts the coral cliffs of the east and returns along the high inland trail, through mangroves and centuries-old ceiba trees. A passage of frigatebirds, pelicans and the warm breeze of the equatorial Pacific.</span>
+          <span class="tr ru">Полный обход острова по прибрежному периметру. Выходит с главного пляжа, огибает коралловые скалы востока и возвращается по верхней внутренней тропе, через мангры и вековые сейбы. Маршрут фрегатов, пеликанов и тёплого бриза экваториального Тихого океана.</span>
         </p>
         <div class="trail__meta">
           <div>
@@ -1021,19 +1022,18 @@ section { padding: 8rem 2rem; position: relative; }
       </div>
     </article>
 
-    <!-- Trail 02 -->
     <article class="trail fade-up">
       <div class="trail__num">02</div>
       <div class="trail__body">
         <h3 class="trail__title">
           <span class="tr es">Isla Porcada · Cresta Norte</span>
           <span class="tr en">Isla Porcada · North Ridge</span>
-          <span class="tr ru">Иsla Porcada · Северный гребень</span>
+          <span class="tr ru">Isla Porcada · Северный гребень</span>
         </h3>
         <p class="trail__desc">
-          <span class="tr es">La cresta norte de la isla, uno de los pocos puntos desde donde se ve, al mismo tiempo, el mar de las dos costas. Senda estrecha, piedra viva, viento constante. Recomendada para caminantes con tobillo entrenado.</span>
-          <span class="tr en">The northern ridge of the island, one of the few points from which both coasts' seas are visible at once. Narrow path, living stone, constant wind. Recommended for walkers with a trained ankle.</span>
-          <span class="tr ru">Северный гребень острова, одна из немногих точек, откуда видны моря обоих побережий одновременно. Узкая тропа, живой камень, постоянный ветер. Рекомендуется путникам с тренированной лодыжкой.</span>
+          <span class="tr es">La cresta norte de la isla, uno de los pocos puntos desde donde se ve, al mismo tiempo, el océano Pacífico y la espesura del bosque tropical. Senda estrecha entre bromelias, orquídeas silvestres y helechos arborescentes; brisa alisia constante. Recomendada para caminantes con tobillo entrenado.</span>
+          <span class="tr en">The northern ridge of the island, one of the few points from which both the Pacific Ocean and the dense tropical rainforest are visible at once. Narrow path among bromeliads, wild orchids and tree ferns; constant trade wind. Recommended for walkers with a trained ankle.</span>
+          <span class="tr ru">Северный гребень острова, одна из немногих точек, откуда одновременно видны Тихий океан и густота тропического леса. Узкая тропа среди бромелий, диких орхидей и древовидных папоротников; постоянный пассат. Рекомендуется путникам с тренированной лодыжкой.</span>
         </p>
         <div class="trail__meta">
           <div>
@@ -1065,7 +1065,6 @@ section { padding: 8rem 2rem; position: relative; }
       </div>
     </article>
 
-    <!-- Trail 03 -->
     <article class="trail fade-up">
       <div class="trail__num">03</div>
       <div class="trail__body">
@@ -1075,9 +1074,9 @@ section { padding: 8rem 2rem; position: relative; }
           <span class="tr ru">Валерия · Маршрут окрестностей</span>
         </h3>
         <p class="trail__desc">
-          <span class="tr es">Ya no es la isla, pero la isla se sigue viendo. La ruta de Valeria atraviesa el olivar viejo y el pinar de repoblación hasta el mirador donde la Porcada entera cabe en una sola fotografía. Es la ruta más larga del archivo y la única que sale del término insular.</span>
-          <span class="tr en">It is no longer the island, but the island can still be seen. The Valeria route crosses the old olive grove and the repopulated pine forest up to the lookout where the whole of Porcada fits into a single photograph. It is the longest route in the archive and the only one leaving the island's boundary.</span>
-          <span class="tr ru">Это уже не остров, но остров всё ещё виден. Маршрут Валерии проходит через старую оливковую рощу и восстанавливаемый сосновый лес до смотровой площадки, где вся Поркада помещается в одном кадре. Это самый длинный маршрут в архиве и единственный, выходящий за пределы острова.</span>
+          <span class="tr es">Ya no es la isla, pero la isla se sigue viendo. La ruta de Valeria atraviesa el bosque tropical húmedo y los manglares litorales del litoral de Chiriquí hasta el mirador donde la Porcada entera cabe en una sola fotografía. Paso de monos aulladores, iguanas y tucanes. Es la ruta más larga del archivo y la única que sale del término insular.</span>
+          <span class="tr en">It is no longer the island, but the island can still be seen. The Valeria route crosses the humid tropical rainforest and the coastal mangroves of the Chiriquí littoral up to the lookout where the whole of Porcada fits into a single photograph. A passage of howler monkeys, iguanas and toucans. It is the longest route in the archive and the only one leaving the island's boundary.</span>
+          <span class="tr ru">Это уже не остров, но остров всё ещё виден. Маршрут Валерии проходит через влажный тропический лес и прибрежные мангры тихоокеанского побережья Чирики до смотровой площадки, где вся Поркада помещается в одном кадре. На пути — ревуны, игуаны и туканы. Это самый длинный маршрут в архиве и единственный, выходящий за пределы острова.</span>
         </p>
         <div class="trail__meta">
           <div>
@@ -1109,7 +1108,6 @@ section { padding: 8rem 2rem; position: relative; }
       </div>
     </article>
 
-    <!-- Trail 04 -->
     <article class="trail fade-up">
       <div class="trail__num">04</div>
       <div class="trail__body">
@@ -1119,9 +1117,9 @@ section { padding: 8rem 2rem; position: relative; }
           <span class="tr ru">Ла Ремедиос · Древний путь</span>
         </h3>
         <p class="trail__desc">
-          <span class="tr es">El camino viejo de La Remedios, usado hasta los años cincuenta para llevar pescado seco al pueblo del interior. Hoy apenas se transita, pero los muretes de piedra seca siguen marcando el paso. Es la ruta más corta del archivo y la más llana; idónea para un caminar lento, de media jornada.</span>
-          <span class="tr en">The old way of La Remedios, used until the 1950s to carry dried fish to the inland village. Today it is barely walked, but the dry-stone walls still mark the passage. It is the shortest and flattest route in the archive; ideal for a slow, half-day walk.</span>
-          <span class="tr ru">Старая дорога Ла Ремедиос, по которой до 1950-х годов везли сушёную рыбу в деревню внутри острова. Сегодня её почти не проходят, но сухие каменные стенки всё ещё отмечают путь. Это самый короткий и ровный маршрут в архиве; идеально для медленной полуденной прогулки.</span>
+          <span class="tr es">El camino viejo de La Remedios, usado hasta los años cincuenta para llevar pescado seco a las comunidades del litoral de Chiriquí. Hoy apenas se transita, pero los muretes de piedra coralina siguen marcando el paso entre sombra de mangle y palma de coco. Es la ruta más corta del archivo y la más llana; idónea para un caminar lento, de media jornada.</span>
+          <span class="tr en">The old way of La Remedios, used until the 1950s to carry dried fish to the coastal communities of Chiriquí. Today it is barely walked, but the dry coral-stone walls still mark the passage through the shade of mangrove and coconut palm. It is the shortest and flattest route in the archive; ideal for a slow, half-day walk.</span>
+          <span class="tr ru">Старая дорога Ла Ремедиос, по которой до 1950-х годов везли сушёную рыбу в прибрежные общины Чирики. Сегодня её почти не проходят, но сухие коралловые стенки всё ещё отмечают путь сквозь тень мангров и кокосовых пальм. Это самый короткий и ровный маршрут в архиве; идеально для медленной полуденной прогулки.</span>
         </p>
         <div class="trail__meta">
           <div>
@@ -1153,19 +1151,18 @@ section { padding: 8rem 2rem; position: relative; }
       </div>
     </article>
 
-    <!-- Trail 05 -->
     <article class="trail fade-up">
       <div class="trail__num">05</div>
       <div class="trail__body">
         <h3 class="trail__title">
           <span class="tr es">Isla Porcada · Costa de los Crespúsculos</span>
           <span class="tr en">Isla Porcada · Coast of Twilights</span>
-          <span class="tr ru">Иsla Porcada · Берег сумерек</span>
+          <span class="tr ru">Isla Porcada · Берег сумерек</span>
         </h3>
         <p class="trail__desc">
-          <span class="tr es">El tramo sudoeste de la isla, expuesto a los vientos largos del ocaso. Pasa por tres calas pequeñas, una fuente de agua dulce casi salada y termina en el punto donde el sol cae justo detrás del islote del faro. Llevar linterna para el regreso.</span>
-          <span class="tr en">The southwest stretch of the island, exposed to the long winds of dusk. It passes three small coves, a freshwater spring that is almost salty, and ends at the point where the sun falls just behind the lighthouse islet. Bring a torch for the return.</span>
-          <span class="tr ru">Юго-западный участок острова, открытый долгим вечерним ветрам. Проходит через три маленькие бухты, источник пресной воды, которая почти солёная, и заканчивается в точке, где солнце опускается прямо за островком с маяком. Взять фонарик для возвращения.</span>
+          <span class="tr es">El tramo sudoeste de la isla, expuesto a las brisas cálidas del ocaso ecuatorial. Pasa por tres calas coralinas, una poza de marea llena de pececillos plateados y termina en el punto donde el sol cae justo detrás del islote del faro. Llevar linterna para el regreso — en el trópico, el crepúsculo no dura ni veinte minutos.</span>
+          <span class="tr en">The southwest stretch of the island, exposed to the warm breezes of the equatorial dusk. It passes three coral coves, a tide pool full of silvery little fish, and ends at the point where the sun falls just behind the lighthouse islet. Bring a torch for the return — in the tropics, twilight lasts barely twenty minutes.</span>
+          <span class="tr ru">Юго-западный участок острова, открытый тёплым бризам экваториальных сумерек. Проходит через три коралловые бухты, приливную лужицу, полную серебристых рыбёшек, и заканчивается в точке, где солнце опускается прямо за островком с маяком. Взять фонарик для возвращения — в тропиках сумерки длятся едва ли двадцать минут.</span>
         </p>
         <div class="trail__meta">
           <div>
@@ -1199,7 +1196,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Twilight full-bleed -->
 <section class="twilight" id="twilight">
   <div class="twilight__bg">
     <img src="images/PORCADAORIGINAL19.JPG" alt="Crepúsculo de La Porcada" loading="lazy">
@@ -1224,7 +1220,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Duo: aerial + beach -->
 <section class="duo-section">
   <div class="duo">
     <div class="duo__cell">
@@ -1260,7 +1255,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Notice to walkers -->
 <section class="notice" id="aviso">
   <div class="container">
     <div class="section-eyebrow fade-up">
@@ -1279,40 +1273,39 @@ section { padding: 8rem 2rem; position: relative; }
       <li class="notice__item fade-up">
         <span class="notice__num">i.</span>
         <p>
-          <span class="tr es">Llevar agua suficiente — no hay fuentes potables en los tramos altos. Recomendado un litro y medio por persona en verano, uno en invierno.</span>
-          <span class="tr en">Carry enough water — no potable sources on the high stretches. Recommended one and a half litres per person in summer, one in winter.</span>
-          <span class="tr ru">Берите достаточный запас воды — на верхних участках нет питьевых источников. Рекомендуется полтора литра на человека летом, один зимой.</span>
+          <span class="tr es">Llevar agua suficiente — no hay fuentes potables en los tramos altos. Recomendado un litro y medio por persona en temporada seca, dos en temporada de lluvias, por la humedad ambiente.</span>
+          <span class="tr en">Carry enough water — no potable sources on the high stretches. Recommended one and a half litres per person in the dry season, two in the rainy season, due to ambient humidity.</span>
+          <span class="tr ru">Берите достаточный запас воды — на верхних участках нет питьевых источников. Рекомендуется полтора литра на человека в засушливый сезон, два в сезон дождей, из-за влажности воздуха.</span>
         </p>
       </li>
       <li class="notice__item fade-up">
         <span class="notice__num">ii.</span>
         <p>
-          <span class="tr es">No encender fuego fuera de los puntos señalados por el EcoResort. El viento sudoeste puede arrastrar una chispa más lejos de lo que se imagina.</span>
-          <span class="tr en">Do not light fires outside the points marked by the EcoResort. The southwest wind can carry a spark further than one imagines.</span>
-          <span class="tr ru">Не разводите огонь вне точек, отмеченных Экорезортом. Юго-западный ветер может унести искру дальше, чем кажется.</span>
+          <span class="tr es">No encender fuego fuera de los puntos señalados por el EcoResort. En temporada seca, el viento sudoeste puede arrastrar una chispa más lejos de lo que se imagina, y la selva tropical tarda décadas en regenerarse.</span>
+          <span class="tr en">Do not light fires outside the points marked by the EcoResort. In the dry season, the southwest wind can carry a spark further than one imagines, and the tropical rainforest takes decades to regenerate.</span>
+          <span class="tr ru">Не разводите огонь вне точек, отмеченных Экорезортом. В засушливый сезон юго-западный ветер может унести искру дальше, чем кажется, а тропический лес восстанавливается десятилетиями.</span>
         </p>
       </li>
       <li class="notice__item fade-up">
         <span class="notice__num">iii.</span>
         <p>
-          <span class="tr es">Mantener distancia con la fauna salvaje — no alimentar, no perseguir, no grabar. La isla no es un escenario, es un hábitat.</span>
-          <span class="tr en">Keep distance from wild fauna — do not feed, do not chase, do not record. The island is not a stage, it is a habitat.</span>
-          <span class="tr ru">Держите дистанцию от дикой фауны — не кормите, не преследуйте, не снимайте. Остров — не сцена, а среда обитания.</span>
+          <span class="tr es">Mantener distancia con la fauna silvestre — monos aulladores, iguanas, tortugas marinas, aves migratorias. No alimentar, no perseguir, no grabar con flash. La isla no es un escenario, es un hábitat.</span>
+          <span class="tr en">Keep distance from wild fauna — howler monkeys, iguanas, sea turtles, migratory birds. Do not feed, do not chase, do not record with flash. The island is not a stage, it is a habitat.</span>
+          <span class="tr ru">Держите дистанцию от дикой фауны — ревуны, игуаны, морские черепахи, перелётные птицы. Не кормите, не преследуйте, не снимайте со вспышкой. Остров — не сцена, а среда обитания.</span>
         </p>
       </li>
       <li class="notice__item fade-up">
         <span class="notice__num">iv.</span>
         <p>
-          <span class="tr es">Avisar al EcoResort antes de salir y al regresar. Recepción 24h. En caso de emergencia, llamar al 112 y a recepción, en este orden.</span>
-          <span class="tr en">Notify the EcoResort before leaving and upon return. 24h reception. In case of emergency, call 112 and then reception, in this order.</span>
-          <span class="tr ru">Сообщайте Экорезорту перед выходом и по возвращении. Рецепция работает круглосуточно. В случае чрезвычайной ситуации позвоните 112, затем в рецепцию — в этом порядке.</span>
+          <span class="tr es">Avisar al EcoResort antes de salir y al regresar. Recepción 24h. En caso de emergencia, llamar al 911 y a recepción, en este orden.</span>
+          <span class="tr en">Notify the EcoResort before leaving and upon return. 24h reception. In case of emergency, call 911 and then reception, in this order.</span>
+          <span class="tr ru">Сообщайте Экорезорту перед выходом и по возвращении. Рецепция работает круглосуточно. В случае чрезвычайной ситуации позвоните 911, затем в рецепцию — в этом порядке.</span>
         </p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- Colophon -->
 <section class="colophon" id="colofon">
   <div class="container">
     <div class="section-eyebrow fade-up">
@@ -1323,9 +1316,9 @@ section { padding: 8rem 2rem; position: relative; }
       </span>
     </div>
     <p class="colophon__text fade-up-slow">
-      <span class="tr es">Este archivo reúne cinco rutas documentadas en la isla de La Porcada y su entorno más próximo. Cada una ha sido recorrida al menos dos veces, en estaciones distintas, y verificada con brújula y GPS. Las distancias y los desniveles son aproximados pero comprobados. Las rutas están hosteadas en Wikiloc, donde pueden descargarse los trazados completos para uso en campo. EcoResort La Porcada promueve un senderismo responsable y silencioso: no se deja rastro, no se molesta a la fauna, no se enciende fuego fuera de los puntos señalados. El archivo se actualiza cada temporada. Última verificación: marzo de 2026.</span>
-      <span class="tr en">This archive brings together five routes documented on the island of La Porcada and its immediate surroundings. Each has been walked at least twice, in different seasons, and verified with compass and GPS. Distances and elevations are approximate but checked. The routes are hosted on Wikiloc, where full traces can be downloaded for field use. EcoResort La Porcada promotes responsible and silent hiking: leave no trace, do not disturb wildlife, do not light fires outside the marked points. The archive is updated every season. Last verification: March 2026.</span>
-      <span class="tr ru">Этот архив объединяет пять маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях. Каждый пройден как минимум дважды, в разные сезоны, и проверен компасом и GPS. Расстояния и перепады высот приблизительны, но проверены. Маршруты размещены на Wikiloc, где можно загрузить полные треки для использования в поле. Экорезорт Ла Поркада способствует ответственному и тихому пешему туризму: не оставляйте следов, не беспокойте фауну, не разводите огонь вне отмеченных мест. Архив обновляется каждый сезон. Последняя проверка: март 2026.</span>
+      <span class="tr es">Este archivo reúne cinco rutas documentadas en la isla de La Porcada y su entorno más próximo, en el Pacífico de Chiriquí, Panamá. Cada una ha sido recorrida al menos dos veces — en temporada seca y en temporada de lluvias — y verificada con brújula y GPS. Las distancias y los desniveles son aproximados pero comprobados. Las rutas están hosteadas en Wikiloc, donde pueden descargarse los trazados completos para uso en campo. EcoResort La Porcada promueve un senderismo responsable y silencioso: no se deja rastro, no se molesta a la fauna, no se enciende fuego fuera de los puntos señalados. El archivo se actualiza cada temporada. Última verificación: marzo de 2026.</span>
+      <span class="tr en">This archive brings together five routes documented on the island of La Porcada and its immediate surroundings, in the Pacific of Chiriquí, Panama. Each has been walked at least twice — in the dry season and in the rainy season — and verified with compass and GPS. Distances and elevations are approximate but checked. The routes are hosted on Wikiloc, where full traces can be downloaded for field use. EcoResort La Porcada promotes responsible and silent hiking: leave no trace, do not disturb wildlife, do not light fires outside the marked points. The archive is updated every season. Last verification: March 2026.</span>
+      <span class="tr ru">Этот архив объединяет пять маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях, в тихоокеанской части Чирики, Панама. Каждый пройден как минимум дважды — в засушливый сезон и в сезон дождей — и проверен компасом и GPS. Расстояния и перепады высот приблизительны, но проверены. Маршруты размещены на Wikiloc, где можно загрузить полные треки для использования в поле. Экорезорт Ла Поркада способствует ответственному и тихому пешему туризму: не оставляйте следов, не беспокойте фауну, не разводите огонь вне отмеченных мест. Архив обновляется каждый сезон. Последняя проверка: март 2026.</span>
     </p>
     <div class="colophon__sign fade-up">
       <video autoplay muted loop playsinline>
@@ -1338,7 +1331,6 @@ section { padding: 8rem 2rem; position: relative; }
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__top">
@@ -1350,9 +1342,9 @@ section { padding: 8rem 2rem; position: relative; }
           <span class="tr ru">Тропы Ла Поркада</span>
         </h2>
         <p class="footer__sub">
-          <span class="tr es">Archivo de cinco rutas documentadas en la isla de La Porcada y su entorno inmediato. Primera edición, marzo de 2026.</span>
-          <span class="tr en">Archive of five routes documented on the island of La Porcada and its immediate surroundings. First edition, March 2026.</span>
-          <span class="tr ru">Архив пяти маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях. Первое издание, март 2026.</span>
+          <span class="tr es">Archivo de cinco rutas documentadas en la isla de La Porcada y su entorno inmediato, Pacífico de Chiriquí, Panamá. Primera edición, marzo de 2026.</span>
+          <span class="tr en">Archive of five routes documented on the island of La Porcada and its immediate surroundings, Pacific of Chiriquí, Panama. First edition, March 2026.</span>
+          <span class="tr ru">Архив пяти маршрутов, задокументированных на острове Ла Поркада и в его ближайших окрестностях, тихоокеанская часть Чирики, Панама. Первое издание, март 2026.</span>
         </p>
       </div>
       <div>
@@ -1396,7 +1388,6 @@ section { padding: 8rem 2rem; position: relative; }
 (function () {
   'use strict';
 
-  // --- Language switcher ---
   const langButtons = document.querySelectorAll('[data-lang-btn]');
   const body = document.body;
   langButtons.forEach(function (btn) {
@@ -1409,7 +1400,6 @@ section { padding: 8rem 2rem; position: relative; }
     });
   });
 
-  // --- Hero video loop (first 8 seconds only) ---
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
     heroVideo.addEventListener('timeupdate', function () {
@@ -1418,17 +1408,14 @@ section { padding: 8rem 2rem; position: relative; }
         if (heroVideo.paused) heroVideo.play().catch(function () {});
       }
     });
-    // Try to autoplay (muted + playsinline already set)
     heroVideo.play().catch(function () {});
   }
 
-  // --- Mark hero loaded (for staggered entrance) ---
   window.addEventListener('load', function () {
     const hero = document.querySelector('.hero');
     if (hero) hero.classList.add('is-loaded');
   });
 
-  // --- IntersectionObserver for fade-ups ---
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -1442,12 +1429,10 @@ section { padding: 8rem 2rem; position: relative; }
     document.querySelectorAll('.fade-up, .fade-up-slow, .row-stagger')
       .forEach(function (el) { io.observe(el); });
   } else {
-    // Fallback: show everything
     document.querySelectorAll('.fade-up, .fade-up-slow, .row-stagger')
       .forEach(function (el) { el.classList.add('is-in'); });
   }
 
-  // --- Mosaic push-back hover ---
   const mosaicGrid = document.getElementById('mosaicGrid');
   if (mosaicGrid && window.matchMedia('(pointer: fine)').matches) {
     mosaicGrid.querySelectorAll('.mosaic__tile').forEach(function (tile) {
